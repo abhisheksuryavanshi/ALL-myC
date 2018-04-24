@@ -1,0 +1,24 @@
+#0           JMP  var1
+#3           DB 3
+#4    var1   JMP  var2
+#7           DB 5
+#8    var2   JMP  var3
+#11          DB 4
+#12   var3   LDA 7
+#15          MOV B, A
+#16          LDA 11
+#19          SUB B
+#20          JP  if2
+#23          JZ  if2
+#26          MVI A, 5
+#28          STA 3
+#31          LDA 3
+#34          MOV B, A
+#35          LDA 7
+#38          SUB B
+#39          JNZ  if1
+#42          MVI A, 6
+#44          STA 11
+#47   if1    LDA 3
+#50          STA 7
+#53   if2    HLT
