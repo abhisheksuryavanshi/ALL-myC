@@ -1,0 +1,10 @@
+MVI D, ='5'
+MOV #c,D
+MVI A, 1
+STA #a+1
+LDA #c
+STA #a+3
+END
+c DS 1
+='5'
+a DS 5

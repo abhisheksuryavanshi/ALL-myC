@@ -1,0 +1,14 @@
+MVI D, ='0'
+MOV 19,D
+JMP 14
+LDA 19
+ADI 20
+STA 19
+MVI D, ='10'
+MOV 19,D
+END
+c DS 1
+c DS 1
+='0'
+='10'
+HLT

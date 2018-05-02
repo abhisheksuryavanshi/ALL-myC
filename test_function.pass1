@@ -1,0 +1,13 @@
+MVI D, ='0'
+MOV #a,D
+JMP !!!0
+LDA #a
+ADI 1
+STA #a
+RET
+CALL ~~~inca
+CALL ~~~inca
+CALL ~~~inca
+END
+a DS 1
+='0'

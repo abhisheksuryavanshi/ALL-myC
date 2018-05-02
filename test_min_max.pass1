@@ -1,0 +1,57 @@
+MVI D, ='1'
+MOV #a,D
+MVI D, ='2'
+MOV #b,D
+MVI D, ='0'
+MOV #mini,D
+MVI D, ='0'
+MOV #maxi,D
+LDA #a
+MOV C,A
+LDA #b
+MOV B,A
+MOV A,C
+SUB B
+JM %29
+MOV G,B
+JP %30
+MOV G,C
+MOV A,G
+MVI B, 3
+MOV C,A
+SUB B
+JM %42
+MOV G,B
+JP %43
+MOV G,C
+MOV A,G
+STA #mini
+LDA #a
+MOV C,A
+LDA #b
+MOV B,A
+MOV A,C
+SUB B
+JP %64
+MOV G,B
+JM %65
+MOV G,C
+MOV A,G
+MVI B, 3
+MOV C,A
+SUB B
+JP %77
+MOV G,B
+JM %78
+MOV G,C
+MOV A,G
+STA #mini
+END
+a DS 1
+b DS 1
+mini DS 1
+maxi DS 1
+='1'
+='2'
+='0'
+='0'

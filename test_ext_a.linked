@@ -1,0 +1,5 @@
+MVI D, ='5'
+MOV @4,D
+END
+a DS 1
+='5'

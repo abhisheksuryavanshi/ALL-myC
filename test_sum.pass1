@@ -1,0 +1,39 @@
+MVI D, ='5'
+MOV #a,D
+MVI D, ='10'
+MOV #b,D
+MVI D, ='0'
+MOV #sum1,D
+MVI A, 1
+ADI 2
+STA #sum1
+MVI D, ='0'
+MOV #sum2,D
+LDA #a
+ADI 2
+STA #sum2
+MVI D, ='0'
+MOV #sum3,D
+LDA #b
+ADI 3
+STA #sum3
+MVI D, ='0'
+MOV #sum4,D
+LDA #a
+MOV B,A
+LDA #b
+ADD B
+STA #sum4
+END
+a DS 1
+b DS 1
+sum1 DS 1
+sum2 DS 1
+sum3 DS 1
+sum4 DS 1
+='5'
+='10'
+='0'
+='0'
+='0'
+='0'
