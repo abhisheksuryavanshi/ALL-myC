@@ -1,0 +1,35 @@
+MVI D, ='3'
+MOV @67,D
+MVI D, ='4'
+MOV @68,D
+MVI D, ='0'
+MOV @69,D
+LDA @67
+SUI 4
+JP @28
+JZ @28
+LDA @69
+ADI 2
+STA @69
+LDA @68
+SUI 2
+JM @47
+JZ @47
+LDA @67
+ADI 1
+STA @67
+LDA @68
+MOV B,A
+LDA @67
+SUB B
+JNZ @66
+LDA @69
+ADI 3
+STA @69
+END
+a DS 1
+b DS 1
+c DS 1
+='3'
+='4'
+='0'

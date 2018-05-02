@@ -1,0 +1,40 @@
+MVI D, ='5'
+MOV #a,D
+MVI D, ='10'
+MOV #b,D
+MVI D, ='0'
+MOV #diff1,D
+MVI A, 2
+SUI 1
+STA #diff1
+MVI D, ='0'
+MOV #diff2,D
+LDA #b
+SUI 2
+STA #diff2
+MVI D, ='0'
+MOV #diff3,D
+MVI A, 10
+MOV B,#a
+SUB B
+STA #diff3
+MVI D, ='0'
+MOV #diff4,D
+LDA #a
+MOV B,A
+LDA #b
+SUB B
+STA #diff4
+END
+a DS 1
+b DS 1
+diff1 DS 1
+diff2 DS 1
+diff3 DS 1
+diff4 DS 1
+='5'
+='10'
+='0'
+='0'
+='0'
+='0'

@@ -1,0 +1,15 @@
+MVI D, ='0'
+MOV @23,D
+PUSH E
+MVI E, 3
+LDA @23
+ADI 1
+STA @23
+MOV A,E
+SUI 1
+MOV E,A
+JNZ %6
+POP E
+END
+a DS 1
+='0'

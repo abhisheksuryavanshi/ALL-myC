@@ -1,0 +1,15 @@
+MVI D, ='0'
+MOV #a,D
+PUSH E
+MVI E, 3
+LDA #a
+ADI 1
+STA #a
+MOV A,E
+SUI 1
+MOV E,A
+JNZ ~~~loop0
+POP E
+END
+a DS 1
+='0'
