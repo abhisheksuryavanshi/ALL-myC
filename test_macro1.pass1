@@ -1,0 +1,24 @@
+MVI D, ='0'
+MOV #c,D
+MVI D, ='0'
+MOV #d,D
+MVI D, ='0'
+MOV #e,D
+LDA #e
+ADI 5
+STA #e
+LDA #d
+ADI 10
+STA #d
+LDA #d
+MOV B,A
+LDA #e
+ADD B
+STA #c
+END
+c DS 1
+d DS 1
+e DS 1
+='0'
+='0'
+='0'

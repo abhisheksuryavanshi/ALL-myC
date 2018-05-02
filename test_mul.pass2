@@ -1,0 +1,73 @@
+MVI D, ='5'
+MOV @111,D
+MVI D, ='3'
+MOV @112,D
+MVI D, ='0'
+MOV @113,D
+MVI B, 0
+MVI A, 2
+JZ @27
+MOV C,A
+MVI A, 3
+ADD B
+MOV B,A
+MOV A,C
+SUI 1
+JMP %13
+MOV A,B
+STA @113
+MVI D, ='0'
+MOV @114,D
+MVI B, 0
+LDA @112
+JZ %53
+MOV C,A
+MVI A, 2
+ADD B
+MOV B,A
+MOV A,C
+SUI 1
+JMP %39
+MOV A,B
+STA @114
+MVI D, ='0'
+MOV @115,D
+MVI B, 0
+LDA @111
+JZ @79
+MOV C,A
+MVI A, 3
+ADD B
+MOV B,A
+MOV A,C
+SUI 1
+JMP %65
+MOV A,B
+STA @115
+MVI D, ='0'
+MOV @116,D
+MVI B, 0
+LDA @111
+JZ %106
+MOV C,A
+LDA @112
+ADD B
+MOV B,A
+MOV A,C
+SUI 1
+JMP %91
+MOV A,B
+STA @116
+END
+a DS 1
+b DS 1
+mul1 DS 1
+mul2 DS 1
+mul3 DS 1
+mul4 DS 1
+='5'
+='3'
+='0'
+='0'
+='0'
+='0'
